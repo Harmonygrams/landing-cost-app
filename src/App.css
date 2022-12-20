@@ -1,0 +1,237 @@
+*::before {
+  margin: 0; 
+  padding: 0; 
+}
+.sidebar__container, 
+.add-product__container, 
+.add-expense__container, 
+.optional__expenses-container, 
+.transparent__container {
+    background-color: rgba(128, 128, 128, .3);
+}
+.sidebar {
+    background-color: #1e1e1e;
+}
+.table-heading {
+    border-bottom: 1px solid rgba(128, 128, 128, .6); 
+    border-inline: 1px solid rgba(128, 128, 128, .6); 
+}
+.table__body-row {
+    border-bottom: 1px solid  rgba(128, 128, 128, .6);
+}
+.add__new-button {
+    background-color: #1e1e1e;
+}
+.table__head-order { 
+    border: 1px solid black; 
+    font-weight: 400;
+    font-size: 1rem;
+}
+.table-order {
+    border-collapse: collapse; 
+}
+.table__head {
+    position: relative; 
+}
+.table__head div {
+    height: 100%;
+    width: 5px;
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    cursor: col-resize;
+}
+
+.table-wrapper {
+    margin-bottom: 25px;
+    border-radius: 6px;
+    background: #fff;
+    z-index: 1;
+    /* overflow: hidden; Clip any scrollbars that appear */
+    /* overflow-y: visible !important; */
+  }
+  
+.resizeable-table-order {
+    width: 100%;
+    display: grid;
+    overflow-x: scroll;
+    /* overflow-y: visible !important; */
+    height: min-content;
+    scrollbar-width: none;
+    grid-template-columns:
+      minmax(50px, 1fr)
+      minmax(200px, 1fr)
+      minmax(200px, 2fr)
+      minmax(200px, 2fr)
+      minmax(50px, 1fr)
+      minmax(150px, 1fr)
+      minmax(200px, 1fr)
+      minmax(20px, 1fr)
+  }
+.resizeable-table-order::-webkit-scrollbar {
+  display: none;
+}
+.resizeable-table-order thead,
+.resizeable-table-order tbody,
+.resizeable-table-order tr {
+    display: contents;
+  }
+  
+.resizeable-table-order th {
+    position: relative;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+.resizeable-table-order th,
+.resizeable-table-order td {
+    text-align: left;
+    padding: 10px 10px;
+    min-width: 100px;
+  }
+  
+
+
+.resizeable-table-order td input{
+  border: 1px solid gray; 
+  text-overflow: ellipsis;
+}
+.resizeable-table-order th span,
+.resizeable-table-order td span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* overflow: hidden; */
+    display: block;
+  }
+.resizeable-table-order tr td {
+    border-bottom: 1px solid #ccc;
+  }
+  
+.resize-handle {
+    display: block;
+    position: absolute;
+    cursor: col-resize;
+    width: 7px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    border-right: 2px solid transparent;
+  }
+  
+.resize-handle:hover {
+    border-color: #ccc;
+  }
+  
+.resize-handle.active {
+    border-color: #517ea5;
+}
+.uiFormControl-root {
+}
+.MuiInputBase-root {
+}
+.MuiInputBase-root input {
+  padding: 6px;
+}
+.product__container-order {
+  position: fixed;
+  border: 1px solid gray; 
+}
+textarea {
+  border: 1px solid gray;
+}
+.landing__cost-table {
+  border: 1px solid rgba(128, 128, 128, .8);
+}
+
+.dropdown__item-container {
+  width: 600px;
+  height: min-content;
+  max-height: 300px;
+  z-index: 100;
+}
+.dropdown__settings-container {
+  width: 550px;
+  height: min-content;
+  max-height: 300px;
+  z-index: 100;
+}
+.tooltip__container::before{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border: 8px solid transparent;
+  border-top: 8px solid black; 
+}
+.tooltip__container {
+  animation: fadeIn; 
+  animation-duration: 0.5s; 
+
+}
+@keyframes fadeIn{
+  from {
+    opacity : 0
+  }
+  to {
+    opacity: 1;
+  }
+}
+.analytics-col-1-heading {
+  position: relative;
+  padding-block: 5px; 
+}
+.analytics-col-1-heading::before{
+  content: ""; 
+  position: absolute; 
+  width: 50px; 
+  top: 0; 
+  left: 0; 
+  height: 5px;
+  border-radius: 20px;
+  background-color: #f44336;
+  opacity: 80%;
+}
+.analytics-heading-2::before {
+  background-color: #EAB308;
+
+}
+.table-new {
+  width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+.table-new-body {
+  border-bottom: 2px solid #f1efef; 
+}
+.table-new-heading__row {
+  background-color: #1e1e1e;
+  color: white;
+}
+.table-new-body-data,
+.table-new-heading__row-head {
+  padding-block: 20px;
+  padding-inline: 20px;
+  
+}
+.table-new-heading__row-head {
+  font-weight: 500;
+  text-align: left;
+  font-size: .9rem;
+}
+.table-new-body-data {
+  font-size: .9rem;
+  font-weight: 400;
+  color: #1e1e1e;
+  background-color: white; 
+}
+.arrow_icon-caret {
+  transform: rotate(270deg);
+}
+.table-new-body-data-action{
+  font-size: .9rem;
+  font-weight: 400;
+  color: #1e1e1e;
+  background-color: white; 
+  padding-inline: 20px;
+}
