@@ -1,9 +1,11 @@
 import axios from "axios"
+import { rootUrl } from "./rootUrl"
 const fetchProducts = (setProductTableData, query) => {
     const raw = {}
     raw.query = query
     axios({
-        url : "https://server.landing-cost.chibuike.net/product/fetch",
+        url : "product/fetch",
+        baseURL : rootUrl(),
         method : 'POST', 
         data : raw,
     }).then(response => response.data).

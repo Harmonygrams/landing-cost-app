@@ -1,8 +1,11 @@
 import axios from 'axios'
+import { rootUrl } from './rootUrl'
 const fetchProductsCount = (state, status) => {
     axios({
-        url : 'https://server.landing-cost.chibuike.net/product/product-count', 
+        url : 'product/product-count', 
+        baseURL : rootUrl(),
         method : 'get'
+
     }). 
     then(response => {
         const { success } = response.data

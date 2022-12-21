@@ -1,8 +1,10 @@
 import axios from 'axios'
+import { rootUrl } from './rootUrl'
 const fetchDefaultCurrencies = (getFetchedData) => {
     axios({
+        url : 'settings/fetch-default-currencies',
         method : 'get', 
-        url : 'https://server.landing-cost.chibuike.net/settings/fetch-default-currencies'
+        baseURL : rootUrl(),
     }).
     then(response => {
         if(response.data.success){

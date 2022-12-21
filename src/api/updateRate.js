@@ -1,7 +1,9 @@
 import axios from 'axios'
+import { rootUrl } from './rootUrl'
 const updateRate = (payload) => {
     axios({
-        url : 'https://server.landing-cost.chibuike.net/settings/rate-update/', 
+        url : 'settings/rate-update/',
+        baseURL : rootUrl(),
         method : 'put',
         data : payload
     }). 

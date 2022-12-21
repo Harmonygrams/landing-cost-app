@@ -1,8 +1,10 @@
 import axios from 'axios'
+import { rootUrl } from './rootUrl'
 const updateCurrency = (payload, status) => {
     return(
         axios({
-            url : 'https://server.landing-cost.chibuike.net/currency-update/', 
+            url : 'settings/currency-update/', 
+            baseURL : rootUrl(),
             method : 'put',
             data : payload
         }).

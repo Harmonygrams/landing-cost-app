@@ -1,7 +1,9 @@
 import axios from 'axios'
+import { rootUrl } from './rootUrl'
 const fetchExpensesCount = (state, status) => {
     axios({
-        url : 'https://server.landing-cost.chibuike.net/expense/expense-count',
+        url : 'expense/expense-count',
+        baseURL : rootUrl(),
         method : 'get'
     }). 
     then(response => {

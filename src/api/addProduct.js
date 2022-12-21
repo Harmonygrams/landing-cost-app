@@ -1,7 +1,9 @@
 import axios from 'axios'
+import { rootUrl } from './rootUrl'
 const addProduct = (formData, setIsProcessing,  resetFormData) => {
     axios({
-        url : 'https://server.landing-cost.chibuike.net/product/add',
+        url : 'product/add',
+        baseURL : rootUrl(),
         method : 'post', 
         data : formData
     }). 

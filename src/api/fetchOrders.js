@@ -1,7 +1,9 @@
 import axios from 'axios'
+import { rootUrl } from './rootUrl'
 const fetchOrders = (state, status, query) => {
     axios({
-        url : 'https://server.landing-cost.chibuike.net/order/fetch-orders', 
+        url : 'order/fetch-orders', 
+        baseURL : rootUrl(),
         method : 'post', 
         data : query
     }).then(response => {

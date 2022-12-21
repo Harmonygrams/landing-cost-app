@@ -1,7 +1,9 @@
 import axios from 'axios'
+import { rootUrl } from './rootUrl'
 const fetchExpenses = (setExpenses, query) => {
     axios({
-        url : 'https://server.landing-cost.chibuike.net/expense/fetch', 
+        url : 'expense/fetch', 
+        baseURL : rootUrl(),
         method : 'post',
         data : '', 
 

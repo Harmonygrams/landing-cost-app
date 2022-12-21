@@ -1,8 +1,10 @@
 import axios from 'axios'
+import { rootUrl } from './rootUrl'
 const addOrder = (order) => {
     axios({
-        url : "https://server.landing-cost.chibuike.net/order/add-order", 
+        url : "order/add-order", 
         method : "post", 
+        baseURL : rootUrl(),
         data : order
     }).
     then(response => console.log(response)). 
