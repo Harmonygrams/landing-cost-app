@@ -1,7 +1,7 @@
 import axios from 'axios'
 const fetchRate = (state) => {
     axios({
-        url : 'http://localhost:5001/settings/fetch-rate/',
+        url : 'https://server.landing-cost.chibuike.net/settings/fetch-rate/',
         method : 'get', 
     }). 
     then(response => {

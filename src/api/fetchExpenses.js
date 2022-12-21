@@ -1,7 +1,7 @@
 import axios from 'axios'
 const fetchExpenses = (setExpenses, query) => {
     axios({
-        url : 'http://localhost:5001/expense/fetch', 
+        url : 'https://server.landing-cost.chibuike.net/expense/fetch', 
         method : 'post',
         data : '', 
 

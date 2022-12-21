@@ -1,7 +1,7 @@
 import axios from 'axios'
 const fetchExpensesCount = (state, status) => {
     axios({
-        url : 'http://localhost:5001/expense/expense-count',
+        url : 'https://server.landing-cost.chibuike.net/expense/expense-count',
         method : 'get'
     }). 
     then(response => {

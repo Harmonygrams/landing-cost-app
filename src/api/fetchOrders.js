@@ -1,7 +1,7 @@
 import axios from 'axios'
 const fetchOrders = (state, status, query) => {
     axios({
-        url : 'http://localhost:5001/order/fetch-orders', 
+        url : 'https://server.landing-cost.chibuike.net/order/fetch-orders', 
         method : 'post', 
         data : query
     }).then(response => {

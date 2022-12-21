@@ -1,7 +1,7 @@
 import axios from 'axios'
 const updateRate = (payload) => {
     axios({
-        url : 'http://localhost:5001/settings/rate-update/', 
+        url : 'https://server.landing-cost.chibuike.net/settings/rate-update/', 
         method : 'put',
         data : payload
     }). 

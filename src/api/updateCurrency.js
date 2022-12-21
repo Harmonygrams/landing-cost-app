@@ -2,7 +2,7 @@ import axios from 'axios'
 const updateCurrency = (payload, status) => {
     return(
         axios({
-            url : 'http://localhost:5001/settings/currency-update/', 
+            url : 'https://server.landing-cost.chibuike.net/currency-update/', 
             method : 'put',
             data : payload
         }).

@@ -1,7 +1,7 @@
 import axios from 'axios'
 const fetchProductsCount = (state, status) => {
     axios({
-        url : 'http://localhost:5001/product/product-count', 
+        url : 'https://server.landing-cost.chibuike.net/product/product-count', 
         method : 'get'
     }). 
     then(response => {

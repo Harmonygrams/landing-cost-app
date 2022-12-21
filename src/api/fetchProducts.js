@@ -3,7 +3,7 @@ const fetchProducts = (setProductTableData, query) => {
     const raw = {}
     raw.query = query
     axios({
-        url : "http://localhost:5001/product/fetch",
+        url : "https://server.landing-cost.chibuike.net/product/fetch",
         method : 'POST', 
         data : raw,
     }).then(response => response.data).

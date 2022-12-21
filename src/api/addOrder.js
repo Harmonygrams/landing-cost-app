@@ -1,7 +1,7 @@
 import axios from 'axios'
 const addOrder = (order) => {
     axios({
-        url : "http://localhost:5001/order/add-order", 
+        url : "https://server.landing-cost.chibuike.net/order/add-order", 
         method : "post", 
         data : order
     }).

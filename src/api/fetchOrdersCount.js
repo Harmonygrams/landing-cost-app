@@ -1,8 +1,8 @@
 import axios from 'axios'
 const fetchOrdersCount = (state, status) => {
     axios({
-        url : 'http://localhost:5001/order/order-count',
-        method : ''
+        url : 'http://server.landing-cost.chibuike.net/product/product-count',
+        method : 'get'
     }).
     then(response => {
         const {success} = response.data

@@ -2,7 +2,7 @@ import axios from 'axios'
 const fetchDefaultCurrencies = (getFetchedData) => {
     axios({
         method : 'get', 
-        url : 'http://localhost:5001/settings/fetch-default-currencies'
+        url : 'https://server.landing-cost.chibuike.net/settings/fetch-default-currencies'
     }).
     then(response => {
         if(response.data.success){

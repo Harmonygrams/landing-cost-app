@@ -1,5 +1,6 @@
 {
   "name": "expense-manager",
+  "homepage" : "https://landing-cost.chibuike.net",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
