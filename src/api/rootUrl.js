@@ -3,6 +3,6 @@ const rootUrl = () => {
     const url = "https://landing-cost-server-1.chibuike.net"
     //development 
     const developmentUrl = "http://localhost:5001"
-    return url
+    return developmentUrl
 }
 export { rootUrl }
