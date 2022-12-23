@@ -235,3 +235,17 @@ textarea {
   background-color: white; 
   padding-inline: 20px;
 }
+.order__purchased-items-list{
+  border: 1px solid #f2efef; 
+}
+
+.order__purchased-items-list-more-details-container {
+  animation: fadeInContainer;
+  animation-duration: 0.45s;
+  animation-timing-function:ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInContainer {
+  from {opacity: 0%}
+  to { opacity: 100%; }
+}

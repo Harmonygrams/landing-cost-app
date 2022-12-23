@@ -29,8 +29,8 @@ const OrderTable = () => {
                             return(
                                 <tr key={order._id} className="table-new-body"> 
                                     <td className="table-new-body-data">{formatDate(order.date)}</td>
-                                    <td className="table-new-body-data">{order.currency.primaryCurrency.symbol} {order.currency.rate}</td>
-                                    <td className="table-new-body-data">{order.currency.primaryCurrency.symbol} {order.commission}</td>
+                                    <td className="table-new-body-data">{order.currency.primaryCurrency.symbol} {Number(order.currency.rate).toLocaleString()}</td>
+                                    <td className="table-new-body-data">{order.currency.primaryCurrency.symbol} {(order.commission).toLocaleString()}</td>
                                     <td className="table-new-body-data">{order.currency.primaryCurrency.symbol} {(order.landingAmountTotal).toLocaleString()}</td>
                                     <OrderTableActionRow id={order._id}/>
                                 </tr>
