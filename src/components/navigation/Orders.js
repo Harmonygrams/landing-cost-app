@@ -2,17 +2,26 @@ import { useEffect, useMemo, useState } from "react"
 import { useDispatch } from "react-redux"
 import { actions as sidebarActions } from '../../store/sidebarSlice/sidebarSlice'
 import {actions as expensesActions} from '../../store/expenseSlice/expenseSlice'
+import { fetchDefaultCurrencies } from '../../api/fetchDefaultCurrencies'
 import { IoAnalyticsSharp } from "react-icons/io5"
 import { fetchOrdersCount } from "../../api/fetchOrdersCount"
+import { fetchLandingAmountTotal } from "../../api/fetchLandingAmountTotal"
 import { ScaleLoader } from "react-spinners"
 import { BiWallet } from "react-icons/bi"
 import AddOrder from "../utility/AddOrder"
 import OrderTable from "../tables/OrderTable"
 const Orders = () => {
     const [enableAddNewOrder, setEnableAddNewOrder] = useState(false)
-    const [ orderCount, setOrderCount ] = useState(null) 
+    const [currency, setCurrency] = useState({
+        primaryCurrency : {
+            symbol : '',
+        }
+    })
+    const [ orderCount, setOrderCount ] = useState(null)
+    const [ landingAmountTotal, setLandingAmountTotal ] = useState(null)
     const [ onPageDataLoader, setOnPageDataLoader] = useState({
-        orderCount : true
+        orderCount : true,
+        landingAmountTotal : true
     })
     const dispatch = useDispatch()
     const closeWindow = () => {
@@ -21,10 +30,13 @@ const Orders = () => {
     }
     useEffect(() => {
         fetchOrdersCount(setOrderCount, setOnPageDataLoader)
+        fetchLandingAmountTotal(setLandingAmountTotal, setOnPageDataLoader, '')
+        fetchDefaultCurrencies(setCurrency)
         document.title = "Orders"
         window.localStorage.clear()
         dispatch(sidebarActions.setCurrentPage('orders'))
     }, [])
+    console.log(currency)
     return(
         <div className = ""> 
             <div className="flex flex-col gap-4 mb-8 md:flex-row mt-4"> 
@@ -57,10 +69,12 @@ const Orders = () => {
                     <p className="text-gray-600 text-sm mt-2">Total Expenses</p>
                     <h2 className="text-2xl md:text-4xl mt-2">
                         {
+                            currency.primaryCurrency.symbol
+                        } {onPageDataLoader.landingAmountTotal ? 
                             <ScaleLoader
-                                width={2} 
-                                height={18}
-                            />
+                            width={2} 
+                            height={18}
+                        />: landingAmountTotal.toLocaleString()
                         }
                     </h2>
                 </div>
