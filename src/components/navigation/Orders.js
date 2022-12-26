@@ -17,8 +17,8 @@ const Orders = () => {
             symbol : '',
         }
     })
-    const [ orderCount, setOrderCount ] = useState(null)
-    const [ landingAmountTotal, setLandingAmountTotal ] = useState(null)
+    const [ orderCount, setOrderCount ] = useState(0)
+    const [ landingAmountTotal, setLandingAmountTotal ] = useState(0)
     const [ onPageDataLoader, setOnPageDataLoader] = useState({
         orderCount : true,
         landingAmountTotal : true
